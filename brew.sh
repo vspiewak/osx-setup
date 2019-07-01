@@ -27,7 +27,9 @@ heroku update
 
 # Core casks
 brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java8
+
+brew tap AdoptOpenJDK/openjdk
+brew cask install --appdir="~/Applications" adoptopenjdk8
 
 # Development tool casks
 brew cask install --appdir="/Applications" atom
