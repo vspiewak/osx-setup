@@ -21,6 +21,7 @@ brew install dark-mode
 brew install git
 brew install tree
 brew install golang
+brew install jq 
 
 brew install nvm
 mkdir ~/.nvm
