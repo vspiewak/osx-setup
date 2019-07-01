@@ -42,6 +42,8 @@ brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" vlc
 
+brew cask install --appdir="/Applications" google-drive
+
 # Install Docker
 brew cask install --appdir="/Applications" docker
 
