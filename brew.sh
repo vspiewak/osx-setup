@@ -27,6 +27,16 @@ brew install kubernetes-helm
 brew install nvm
 mkdir ~/.nvm
 
+if ! command grep -qc '/nvm.sh' ~/.profile; then
+  command printf "\n" >> ~/.profile
+  command printf "export NVM_DIR=~/.nvm\n" >> ~/.profile
+  command printf "source $(brew --prefix nvm)/nvm.sh\n" >> ~/.profile
+  command printf "\n" >> ~/.profile
+fi
+
+nvm install --lts
+nvm use default
+    
 # Install Heroku
 brew install heroku/brew/heroku
 heroku update
