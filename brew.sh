@@ -27,6 +27,8 @@ brew install heroku/brew/heroku
 heroku update
 
 # Core casks
+brew cask install google-cloud-sdk
+
 brew cask install --appdir="~/Applications" iterm2
 
 brew tap AdoptOpenJDK/openjdk
