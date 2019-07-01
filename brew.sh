@@ -20,6 +20,7 @@ brew install vim --override-system-vi
 brew install dark-mode
 brew install git
 brew install tree
+brew install golang
 
 # Install Heroku
 brew install heroku/brew/heroku
