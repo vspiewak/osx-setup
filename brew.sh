@@ -18,6 +18,7 @@ brew install vim --override-system-vi
 
 # Install other useful binaries.
 brew install dark-mode
+brew install dockutil
 brew install git
 brew install tree
 brew install golang
