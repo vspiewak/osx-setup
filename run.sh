@@ -13,3 +13,5 @@ ${CURRENT_DIR}/update-osx.sh
 ${CURRENT_DIR}/xcode-cli-tools.sh
 
 ${CURRENT_DIR}/brew.sh
+
+${CURRENT_DIR}/osx.sh
