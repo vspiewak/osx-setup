@@ -22,6 +22,7 @@ brew install git
 brew install tree
 brew install golang
 brew install jq 
+brew install kubernetes-helm
 
 brew install nvm
 mkdir ~/.nvm
