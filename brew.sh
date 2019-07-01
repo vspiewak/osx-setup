@@ -42,7 +42,7 @@ brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" vlc
 
-brew cask install --appdir="/Applications" google-drive
+brew cask install --appdir="/Applications" google-backup-and-sync
 
 brew cask install --appdir="/Applications" intellij-idea
 
