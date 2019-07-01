@@ -39,6 +39,8 @@ source ~/.profile
 nvm install --lts
 nvm use default
 
+npm install -g yarn
+
 
 # Install Heroku
 brew install heroku/brew/heroku
