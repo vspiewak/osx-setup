@@ -44,6 +44,8 @@ brew cask install --appdir="/Applications" vlc
 
 brew cask install --appdir="/Applications" google-drive
 
+brew cask install --appdir="/Applications" intellij-idea
+
 # Install Docker
 brew cask install --appdir="/Applications" docker
 
