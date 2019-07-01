@@ -22,6 +22,9 @@ brew install git
 brew install tree
 brew install golang
 
+brew install nvm
+mkdir ~/.nvm
+
 # Install Heroku
 brew install heroku/brew/heroku
 heroku update
