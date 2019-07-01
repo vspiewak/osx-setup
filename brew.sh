@@ -34,9 +34,12 @@ if ! command grep -qc '/nvm.sh' ~/.profile; then
   command printf "\n" >> ~/.profile
 fi
 
+source ~/.profile
+
 nvm install --lts
 nvm use default
-    
+
+
 # Install Heroku
 brew install heroku/brew/heroku
 heroku update
