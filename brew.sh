@@ -51,7 +51,7 @@ brew cask install --appdir="/Applications" vlc
 brew cask install --appdir="/Applications" docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 
 # Remove outdated versions from the cellar.
 brew cleanup
