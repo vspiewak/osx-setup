@@ -24,6 +24,8 @@ osx-setup_do_install() {
 
   echo -e "${GREY}[4/4]${NC} 🎉 Done"
 
+  echo -e "\n💡 You should restart ;)\n"
+
 }
 
 # launch install
