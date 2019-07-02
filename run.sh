@@ -7,7 +7,7 @@ echo "Enter root password"
 sudo -v
 
 # Ask for hostname
-read "Enter hostname: " 
+echo -n "Enter hostname: " 
 read CUSTOM_HOSTNAME
 sudo scutil --set ComputerName "$CUSTOM_HOSTNAME"
 sudo scutil --set LocalHostName "$CUSTOM_HOSTNAME"
