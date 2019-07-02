@@ -20,7 +20,7 @@
     unzip -qq -o /tmp/master.zip -d /tmp/
 
     echo -e "${GREY}[3/4]${NC} 🚀 Launch install"
-    /tmp/osx-setup-master/run.sh
+    source /tmp/osx-setup-master/run.sh
 
     echo -e "${GREY}[4/4]${NC} 🎉 Done"
 
