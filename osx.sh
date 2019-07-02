@@ -207,3 +207,11 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # https://apple.stackexchange.com/questions/178923/how-can-i-prevent-itunes-from-auto-starting-when-i-plug-in-an-ios-device/178928#178928
 defaults write com.apple.iTunes StoreActivationMode -integer 1
+
+
+###############################################################################
+# Misc                                                                        #
+###############################################################################
+
+# disable Dictionary results
+defaults write com.apple.spotlight DictionaryLookupEnabled -bool false
