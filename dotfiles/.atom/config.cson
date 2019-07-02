@@ -1,0 +1,11 @@
+"*":
+  core:
+    disabledPackages: [
+      "language-gfm"
+      "welcome"
+    ]
+    telemetryConsent: "no"
+  "exception-reporting":
+    userId: "d9f1203a-4b03-42b4-a197-0ea2cc6bd2b3"
+  welcome:
+    showOnStartup: false

@@ -29,6 +29,8 @@ ${CURRENT_DIR}/brew.sh
 
 ${CURRENT_DIR}/atom.sh
 
+cp -r ${CURRENT_DIR}/dotfiles/. ~/
+
 ${CURRENT_DIR}/osx.sh
 
 ${CURRENT_DIR}/dock.sh
