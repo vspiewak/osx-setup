@@ -7,7 +7,7 @@ CURRENT_DIR=$(dirname $0)
 osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for hostname
-while [ -z CUSTOM_HOSTNAME ]
+while [[ -z CUSTOM_HOSTNAME ]]
 do
    read -e -p "Hostname: " CUSTOM_HOSTNAME
 done
