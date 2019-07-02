@@ -24,3 +24,5 @@ dockutil --add "/Applications/Slack.app" --position 5
 dockutil --add "/Applications/Atom.app" --position 6
 dockutil --add "/Applications/IntelliJ IDEA.app" --position 7
 dockutil --add "/Applications/VLC.app" --position 8
+
+dockutil --add '~/Downloads' --view fan --display stack
