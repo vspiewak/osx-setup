@@ -9,8 +9,10 @@ osascript -e 'tell application "System Preferences" to quit'
 # Ask for hostname
 while [[ -z CUSTOM_HOSTNAME ]]
 do
-   read -e -p "Hostname: " CUSTOM_HOSTNAME
+   read -p "Hostname: " CUSTOM_HOSTNAME
 done
+
+echo "CUSTOM_HOSTNAME $CUSTOM_HOSTNAME"
 
 # Ask for the administrator password upfront
 echo "Enter root password"
