@@ -7,8 +7,8 @@ CURRENT_DIR=$(dirname $0)
 osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for hostname
-local CUSTOM_HOSTNAME
-read -p 'Hostname: ' CUSTOM_HOSTNAME
+echo -n "Hostname: "
+read -r CUSTOM_HOSTNAME
 
 # Ask for the administrator password upfront
 echo "Enter root password"
