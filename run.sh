@@ -9,7 +9,7 @@ osascript -e 'tell application "System Preferences" to quit'
 # Ask for hostname
 while [[ -z "${CUSTOM_HOSTNAME}" ]]
 do
-   read -p "Hostname: " CUSTOM_HOSTNAME
+   read CUSTOM_HOSTNAME
 done
 
 echo "CUSTOM_HOSTNAME [$CUSTOM_HOSTNAME]"
