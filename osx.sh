@@ -21,8 +21,10 @@ dockutil --add "/Applications/Firefox.app" --position 2
 dockutil --add "/Applications/Google Chrome.app" --position 3
 dockutil --add "/Applications/Safari.app" --position 4
 dockutil --add "/Applications/Slack.app" --position 5
-dockutil --add "/Applications/Atom.app" --position 6
-dockutil --add "/Applications/IntelliJ IDEA.app" --position 7
-dockutil --add "/Applications/VLC.app" --position 8
+dockutil --add "/Applications/Telegram.app" --position 6
+dockutil --add "/Applications/WhatsApp.app" --position 7
+dockutil --add "/Applications/Atom.app" --position 8
+dockutil --add "/Applications/IntelliJ IDEA.app" --position 9
+dockutil --add "/Applications/VLC.app" --position 10
 
 dockutil --add '~/Downloads' --view fan --display stack
