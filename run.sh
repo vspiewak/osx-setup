@@ -7,12 +7,8 @@ CURRENT_DIR=$(dirname $0)
 osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for hostname
-echo -n "Hostname: "
-while IFS= read -r CUSTOM_HOSTNAME
-do
-    echo "CUSTOM_HOSTNAME: $CUSTOM_HOSTNAME"
-done
-echo "CUSTOM_HOSTNAME: $CUSTOM_HOSTNAME"
+echo  -n "Hostname: "
+IFS= read -e -r CUSTOM_HOSTNAME
 
 # Ask for the administrator password upfront
 echo "Enter root password"
