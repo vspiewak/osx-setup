@@ -22,9 +22,10 @@ brew install dockutil
 brew install git
 brew install tree
 brew install golang
-brew install jq 
+brew install jq
 brew install kubernetes-helm
 
+# Install nvm / node / yarn
 brew install nvm
 mkdir ~/.nvm
 
@@ -47,7 +48,7 @@ npm install -g yarn
 brew install heroku/brew/heroku
 heroku update
 
-# Core casks
+# Casks
 brew cask install google-cloud-sdk
 
 brew cask install --appdir="~/Applications" iterm2
@@ -55,23 +56,26 @@ brew cask install --appdir="~/Applications" iterm2
 brew tap AdoptOpenJDK/openjdk
 brew cask install --appdir="~/Applications" adoptopenjdk11
 
-# Development tool casks
 brew cask install --appdir="/Applications" atom
 
-# Misc casks
 brew cask install --appdir="/Applications" firefox
+
 brew cask install --appdir="/Applications" google-chrome
+
 brew cask install --appdir="/Applications" skype
+
 brew cask install --appdir="/Applications" telegram
+
 brew cask install --appdir="/Applications" whatsapp
+
 brew cask install --appdir="/Applications" slack
+
 brew cask install --appdir="/Applications" vlc
 
 brew cask install --appdir="/Applications" google-backup-and-sync
 
 brew cask install --appdir="/Applications" intellij-idea
 
-# Install Docker
 brew cask install --appdir="/Applications" docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
