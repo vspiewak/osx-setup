@@ -13,16 +13,19 @@
     local NC
     NC='\033[0m'
 
-    echo -e "${GREY}[1/4]${NC} 🚚 Downloading archive"
+    echo -e "${GREY}[1/5]${NC} 🚿 Cleaning previous install"
+    rm -rf /tmp/master.zip /tmp/osx-setup-master
+
+    echo -e "${GREY}[2/5]${NC} 🚚 Downloading archive"
     curl -s -L -o /tmp/master.zip https://github.com/vspiewak/osx-setup/archive/master.zip > /dev/null
 
-    echo -e "${GREY}[2/4]${NC} 🚧 Uncompress archive"
+    echo -e "${GREY}[3/5]${NC} 🚧 Uncompress archive"
     unzip -qq -o /tmp/master.zip -d /tmp/
 
-    echo -e "${GREY}[3/4]${NC} 🚀 Launch install"
+    echo -e "${GREY}[4/5]${NC} 🚀 Launch install"
     /tmp/osx-setup-master/run.sh
 
-    echo -e "${GREY}[4/4]${NC} 🎉 Done"
+    echo -e "${GREY}[5/5]${NC} 🎉 Done"
 
     echo -e "\n💡 You should restart ;)\n"
 
