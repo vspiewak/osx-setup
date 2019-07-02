@@ -62,6 +62,8 @@ brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" skype
+brew cask install --appdir="/Applications" telegram
+brew cask install --appdir="/Applications" whatsapp
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" vlc
 
