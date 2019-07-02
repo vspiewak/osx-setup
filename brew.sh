@@ -16,6 +16,18 @@ brew upgrade --all
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
 
+
+# Install Bash 4
+brew install bash
+brew install bash-completion2
+#  We installed the new shell, now we have to activate it
+if ! command grep -qc '/usr/local/bin/bash' /etc/shells; then
+  sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+fi
+# Change to the new shell, prompts for password
+chsh -s /usr/local/bin/bash
+
+
 # Install other useful binaries.
 brew install dark-mode
 brew install dockutil
