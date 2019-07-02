@@ -17,7 +17,62 @@ brew upgrade --all
 brew install vim --override-system-vi
 
 
-# Install Bash 4
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install \
+  coreutils \
+  moreutils \
+  findutils \
+  gnu-tar \
+  gnu-sed \
+  gnutls \
+  gawk \
+  gnu-indent \
+  gnu-getopt \
+  grep
+
+if ! command grep -qc 'coreutils' ~/.profile; then
+  #echo 'export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"' >> ~/.profile
+  command printf 'export PATH="'$(brew --prefix coreutils)'/libexec/gnubin:$PATH"\n' >> ~/.profile
+fi
+
+if ! command grep -qc 'moreutils' ~/.profile; then
+  command printf 'export PATH="'$(brew --prefix moreutils)'/libexec/bin:$PATH"\n' >> ~/.profile
+fi
+
+if ! command grep -qc 'findutils' ~/.profile; then
+  command printf 'export PATH="'$(brew --prefix findutils)'/libexec/gnubin:$PATH"\n' >> ~/.profile
+fi
+
+if ! command grep -qc 'gnu-tar' ~/.profile; then
+  command printf 'export PATH="'$(brew --prefix gnu-tar)'/libexec/gnubin:$PATH"\n' >> ~/.profile
+fi
+
+if ! command grep -qc 'gnu-sed' ~/.profile; then
+  command printf 'export PATH="'$(brew --prefix gnu-sed)'/libexec/gnubin:$PATH"\n' >> ~/.profile
+fi
+
+if ! command grep -qc 'gnutls' ~/.profile; then
+  command printf 'export PATH="'$(brew --prefix gnutls)'/bin:$PATH"\n' >> ~/.profile
+fi
+
+if ! command grep -qc 'gawk' ~/.profile; then
+  command printf 'export PATH="'$(brew --prefix gawk)'/libexec/gnubin:$PATH"\n' >> ~/.profile
+fi
+
+if ! command grep -qc 'gnu-indent' ~/.profile; then
+  command printf 'export PATH="'$(brew --prefix gnu-indent)'/libexec/gnubin:$PATH"\n' >> ~/.profile
+fi
+
+if ! command grep -qc 'gnu-getopt' ~/.profile; then
+  command printf 'export PATH="'$(brew --prefix gnu-getopt)'/bin:$PATH"\n' >> ~/.profile
+fi
+
+if ! command grep -qc 'grep' ~/.profile; then
+  command printf 'export PATH="'$(brew --prefix grep)'/libexec/gnubin:$PATH"\n' >> ~/.profile
+fi
+
+
+# Install GNU Bash
 brew install bash
 brew install bash-completion2
 #  We installed the new shell, now we have to activate it
