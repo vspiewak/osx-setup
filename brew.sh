@@ -54,8 +54,7 @@ brew cask install google-cloud-sdk
 
 brew cask install --appdir="~/Applications" iterm2
 
-brew tap AdoptOpenJDK/openjdk
-brew cask install --appdir="~/Applications" adoptopenjdk11
+brew cask install --appdir="~/Applications" java
 
 brew cask install --appdir="/Applications" atom
 
