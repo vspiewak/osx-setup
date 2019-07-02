@@ -12,7 +12,7 @@ do
    read -p "Hostname: " CUSTOM_HOSTNAME
 done
 
-echo "CUSTOM_HOSTNAME $CUSTOM_HOSTNAME"
+echo "CUSTOM_HOSTNAME [$CUSTOM_HOSTNAME]"
 
 # Ask for the administrator password upfront
 echo "Enter root password"
