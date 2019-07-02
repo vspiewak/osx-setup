@@ -21,6 +21,7 @@ brew install dark-mode
 brew install dockutil
 brew install git
 brew install tree
+brew install sbt
 brew install golang
 brew install jq
 brew install kubernetes-helm
