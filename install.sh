@@ -20,8 +20,6 @@
     unzip -qq -o /tmp/master.zip -d /tmp/
 
     echo -e "${GREY}[3/4]${NC} 🚀 Launch install"
-    
-    read -p "Hostname:" myhostname
     /tmp/osx-setup-master/run.sh myhostname
 
     echo -e "${GREY}[4/4]${NC} 🎉 Done"
