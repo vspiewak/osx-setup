@@ -6,21 +6,21 @@ CURRENT_DIR=$(dirname $0)
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
+# Ask for hostname
+echo -n 'Hostname: '
+read CUSTOM_HOSTNAME
+
 # Ask for the administrator password upfront
 echo "Enter root password"
 sudo -v
 
-# Ask for hostname
-echo -n 'Hostname: '
-read CUSTOM_HOSTNAME
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 sudo scutil --set ComputerName "${CUSTOM_HOSTNAME}"
 sudo scutil --set LocalHostName "${CUSTOM_HOSTNAME}"
 sudo scutil --set HostName "${CUSTOM_HOSTNAME}"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${CUSTOM_HOSTNAME}"
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ${CURRENT_DIR}/update-osx.sh
 
