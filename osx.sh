@@ -26,6 +26,3 @@ dockutil --add "/Applications/IntelliJ IDEA.app" --position 7
 dockutil --add "/Applications/VLC.app" --position 8
 
 dockutil --add '~/Downloads' --view fan --display stack
-
-# don't reopen apps after reboot by default
-defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false
