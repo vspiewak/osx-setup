@@ -16,8 +16,7 @@ brew upgrade --all
 # Install more recent versions of some OS X tools.
 brew install vim
 if ! command grep -qc 'vim' ~/.profile; then
-  #echo 'export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"' >> ~/.profile
-  command printf 'export PATH="'$(brew --prefix vim)'/bin:$PATH"\n' >> ~/.profile
+  command printf 'export PATH="'$(brew --prefix vim)'/bin:$PATH"\n\n' >> ~/.profile
 fi
 
 # Install GNU core utilities (those that come with OS X are outdated)
@@ -74,6 +73,7 @@ if ! command grep -qc 'grep' ~/.profile; then
 fi
 command printf '\n' >> ~/.profile
 
+
 # Install GNU Bash
 brew install bash
 
@@ -90,7 +90,7 @@ sudo chsh -s /usr/local/bin/bash $(whoami)
 brew install bash-completion@2
 
 if ! command grep -qc 'bash_completion' ~/.profile; then
-  command printf '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"\n' >> ~/.profile
+  command printf '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"\n\n' >> ~/.profile
 fi
 
 
@@ -102,14 +102,21 @@ brew install tree
 brew install sbt
 brew install golang
 brew install jq
+
+# Install k8s stuffs
 brew install kubernetes-helm
+brew install kubernetes-cli
+
+if ! command grep -qc 'kubectl completion' ~/.profile; then
+  command printf 'source <(kubectl completion bash)\n\n' >> ~/.profile
+fi
+
 
 # Install nvm / node / yarn
 brew install nvm
 mkdir ~/.nvm
 
 if ! command grep -qc '/nvm.sh' ~/.profile; then
-  command printf "\n" >> ~/.profile
   command printf "export NVM_DIR=~/.nvm\n" >> ~/.profile
   command printf "source $(brew --prefix nvm)/nvm.sh\n" >> ~/.profile
   command printf "\n" >> ~/.profile
