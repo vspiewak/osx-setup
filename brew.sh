@@ -14,8 +14,11 @@ brew update
 brew upgrade --all
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
-
+brew install vim
+if ! command grep -qc 'vim' ~/.profile; then
+  #echo 'export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"' >> ~/.profile
+  command printf 'export PATH="'$(brew --prefix vim)'/bin:$PATH"\n' >> ~/.profile
+fi
 
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install \
@@ -31,7 +34,6 @@ brew install \
   grep
 
 if ! command grep -qc 'coreutils' ~/.profile; then
-  #echo 'export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"' >> ~/.profile
   command printf 'export PATH="'$(brew --prefix coreutils)'/libexec/gnubin:$PATH"\n' >> ~/.profile
 fi
 
@@ -70,17 +72,26 @@ fi
 if ! command grep -qc 'grep' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix grep)'/libexec/gnubin:$PATH"\n' >> ~/.profile
 fi
-
+command printf '\n' >> ~/.profile
 
 # Install GNU Bash
 brew install bash
-brew install bash-completion2
+
 #  We installed the new shell, now we have to activate it
 if ! command grep -qc '/usr/local/bin/bash' /etc/shells; then
   sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 fi
+
 # Change to the new shell, prompts for password
-chsh -s /usr/local/bin/bash
+#chsh -s /usr/local/bin/bash
+sudo chsh -s /usr/local/bin/bash $(whoami)
+
+# Install bash completions
+brew install bash-completion@2
+
+if ! command grep -qc 'bash_completion' ~/.profile; then
+  command printf '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"\n' >> ~/.profile
+fi
 
 
 # Install other useful binaries.
