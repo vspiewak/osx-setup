@@ -13,61 +13,61 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
+
 # Install more recent versions of some OS X tools.
 brew install vim
 if ! command grep -qc 'vim' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix vim)'/bin:$PATH"\n\n' >> ~/.profile
 fi
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install \
-  coreutils \
-  moreutils \
-  findutils \
-  gnu-tar \
-  gnu-sed \
-  gnutls \
-  gawk \
-  gnu-indent \
-  gnu-getopt \
-  grep
 
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils
 if ! command grep -qc 'coreutils' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix coreutils)'/libexec/gnubin:$PATH"\n' >> ~/.profile
 fi
 
+brew install moreutils
 if ! command grep -qc 'moreutils' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix moreutils)'/libexec/bin:$PATH"\n' >> ~/.profile
 fi
 
+brew install findutils
 if ! command grep -qc 'findutils' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix findutils)'/libexec/gnubin:$PATH"\n' >> ~/.profile
 fi
 
+brew install gnu-tar
 if ! command grep -qc 'gnu-tar' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix gnu-tar)'/libexec/gnubin:$PATH"\n' >> ~/.profile
 fi
 
+brew install gnu-sed
 if ! command grep -qc 'gnu-sed' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix gnu-sed)'/libexec/gnubin:$PATH"\n' >> ~/.profile
 fi
 
+brew install gnutls
 if ! command grep -qc 'gnutls' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix gnutls)'/bin:$PATH"\n' >> ~/.profile
 fi
 
+brew install gawk
 if ! command grep -qc 'gawk' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix gawk)'/libexec/gnubin:$PATH"\n' >> ~/.profile
 fi
 
+brew install gnu-indent
 if ! command grep -qc 'gnu-indent' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix gnu-indent)'/libexec/gnubin:$PATH"\n' >> ~/.profile
 fi
 
+brew install gnu-getopt
 if ! command grep -qc 'gnu-getopt' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix gnu-getopt)'/bin:$PATH"\n' >> ~/.profile
 fi
 
+brew install grep
 if ! command grep -qc 'grep' ~/.profile; then
   command printf 'export PATH="'$(brew --prefix grep)'/libexec/gnubin:$PATH"\n' >> ~/.profile
 fi
